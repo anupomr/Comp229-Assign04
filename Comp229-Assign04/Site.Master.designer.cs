@@ -7,22 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Comp229_Assign04
-{
-
-
-    public partial class SiteMaster
-    {
-
+namespace Comp229_Assign04 {
+    
+    
+    public partial class SiteMaster {
+        
         /// <summary>
-        /// HeadContent control.
+        /// home control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
-
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl home;
+        
         /// <summary>
         /// MainContent control.
         /// </summary>
