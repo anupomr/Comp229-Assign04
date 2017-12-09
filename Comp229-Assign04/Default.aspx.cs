@@ -37,7 +37,7 @@ namespace Comp229_Assign04
                 // bind the result to the Student GridView
 
                  var models = from c in collection
-                           where c.size==2
+                           //where c.size==2
                            select c;
 
                 JsonGridView.DataSource = models;

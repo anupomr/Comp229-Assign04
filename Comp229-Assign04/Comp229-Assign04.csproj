@@ -206,6 +206,7 @@
       <DependentUpon>Model.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Mini.cs" />
+    <Compile Include="Models\StockReturn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

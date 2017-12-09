@@ -52,7 +52,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li id="home" runat="server"><a href="Default.aspx"><i class="fa fa-home fa-lg"></i>  Home</a></li>
-                        <li><a runat="server" href="~/Model">Model</a></li>
+                        <li id="model" runat="server"><a runat="server" href="~/Model">Model</a></li>
                        
                     </ul>
                 </div>

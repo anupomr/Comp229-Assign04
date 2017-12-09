@@ -1,14 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Comp229_Assign04.Index" %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Comp229_Assign04.Index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2><%: Title %>.</h2>
     <h3>Your Landing page.</h3>
-    
+     <a href="AddModel.aspx" class="btn btn-success btn-sm">
+                   <i class="fa fa-plus"></i>Add Model
+               </a>
     <asp:GridView ID="JsonGridView" runat="server" AutoGenerateColumns="false"
-                    cssClass="table table-bordered table-striped table-hover" >
+                    cssClass="table table-bordered table-striped table-hover" DataKeyNames="MiniName">
                     <Columns>
-                     
-                        <asp:BoundField DataField="MiniName" HeaderText="Mini Name" Visible="true" />
+                        <asp:HyperLinkField DataTextField="MiniName" HeaderText="Mini Name" Visible="true" 
+                             DataNavigateUrlFields="MiniName" DataNavigateUrlFormatString="Model.aspx?MiniName={0}" />
+                        <asp:BoundField DataField="MiniName" HeaderText="Mini Name" Visible="false" />
                         <asp:BoundField DataField="faction" HeaderText="Faction" Visible="true" />
                         <asp:BoundField DataField="rank" HeaderText="Rank" Visible="true" />
                         <asp:BoundField DataField="_base" HeaderText="Base" Visible="true" />

@@ -11,7 +11,23 @@ namespace Comp229_Assign04
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SetActivePage();
+        }
+        private void SetActivePage()
+        {
+            switch (Page.Title)
+            {
+                case "Home":
+                    home.Attributes.Add("class", "active");
+                    Page.Title = string.Format("EWGame :: Home :: {0:d}", DateTime.Now);
+                    break;
+                case "Model":
+                    model.Attributes.Add("class", "active");
+                    Page.Title = string.Format("EWGame :: Model :: {0:d}", DateTime.Now);
+                    break;
+                
+               
+            }
         }
     }
 }
