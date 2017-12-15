@@ -7,27 +7,64 @@
                 <h5>All fields are  required</h5>
                 <br />
                 <div class="form-group">
-                    <label class="control-label" for="MiniNameTextbox">Mini Name   </label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="MiniNameTextbox"
+                    <label class="control-label" for="MiniNameTextBox">Mini Name   </label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="MiniNameTextBox"
                         placeholder="Mini Name" required="true">  
                     </asp:TextBox>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="WillpowerTextbox">Willpower   </label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="WillpowerTextbox"
+                    <label class="control-label" for="FactionTextBox">Faction   </label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="FactionTextBox"
+                        placeholder=" Faction " required="true">    </asp:TextBox>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="RankTextBox">Rank   </label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="RankTextBox"
+                        placeholder="Rank" required="true">  </asp:TextBox>
+                </div>
+               
+                <div class="form-group">
+                    <label class="control-label" for="BaseTextBox">Base   </label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="BaseTextBox"
+                        placeholder=" Base " required="true">    </asp:TextBox>
+                </div>
+
+                 <div class="form-group">
+                    <label class="control-label" for="SizeTextBox">Size   </label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="SizeTextBox"
+                        placeholder="Size" required="true">  </asp:TextBox>
+                </div>
+                 <div class="form-group">
+                    <label class="control-label" for="DeploymentZoneTextBox">Deployment Zone   </label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="DeploymentZoneTextBox"
+                        placeholder="Deployment Zone" required="true">  </asp:TextBox>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="MobilityTextBox">Mobility   </label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="MobilityTextBox"
+                        placeholder="Mobility" required="true">  </asp:TextBox>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="WillpowerTextBox">Willpower   </label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="WillpowerTextBox"
                         placeholder="Willpower" required="true">  </asp:TextBox>
                 </div>
 
-                <div class="form-group">
-                    <label class="control-label" for="MobilityTextbox">Mobility   </label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="MobilityTextBox"
-                        placeholder=" Mobility " required="true">    </asp:TextBox>
+
+                 <div class="form-group">
+                    <label class="control-label" for="ResilianceTextBox">Resiliance   </label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="ResilianceTextBox"
+                        placeholder="Resiliance " required="true">    </asp:TextBox>
                 </div>
+                
 
                 <div class="form-group">
-                    <label class="control-label" for="WoundTextbox">Wound   </label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="WoundDateTextbox"
+                    <label class="control-label" for="WoundTextBox">Wound   </label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="WoundDateTextBox"
                         placeholder="Wounds " required="true">    </asp:TextBox>
                 </div>
 

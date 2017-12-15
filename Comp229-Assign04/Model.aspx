@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Model" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Model.aspx.cs" Inherits="Comp229_Assign04.Model" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Model Directory</h1>
-    <asp:DataList ID="DataList" runat="server">
+    <asp:DataList ID="DataList" runat="server" onitemcommand="DataList_ItemCommand" DataKeyField="MiniName" >
         <ItemTemplate>
             <asp:Literal ID="extraDetailsLiteral" runat="server" EnableViewState="false" />
             Name: <strong><%#Eval("MiniName")%></strong><br />           
@@ -16,10 +16,13 @@
             <br />
             <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("imageUrl") %>' Height="280px" Width="300px" />
             <br />
+            <asp:LinkButton ID="deleteButton" runat="server"
+                Text=<%#"<i class='fa fa-trash-o fa-lg'></i> Delete"%>
+                 ControlStyle-CssClass="btn btn-danger btn-sm"/>
             
         </ItemTemplate>
         <ItemStyle BackColor="#ff0000"></ItemStyle>
-        
+         
     </asp:DataList>
 
 </asp:Content>

@@ -24,17 +24,15 @@ namespace Comp229_Assign04
         private void getGames()
         {
             // Joson file in the project.
-            //var filePath = @"f:\temp\Assign04.json";
-           
-            var filePath = @"F:\Semester3\ASPLAB\Comp229-Assign04\Comp229-Assign04\App_Data\Assign04.json";
-            //var filePath = HostingEnvironment.MapPath(@"App_Data/Assign04.json");
+            var filePath = MapPath("~/App_Data/Assign04.json");
+
             if (File.Exists(filePath))
             {
                 var jsonString = File.ReadAllText(filePath);
-                //TODO: Get json file contents into string
+                //Get json file contents into string
                 var collection = JsonConvert.DeserializeObject<List<Mini>>(jsonString);
-                //var i = 0;
-                // bind the result to the Student GridView
+                
+                // bind the result to the Datalist
 
                  var models = from c in collection
                               select c;
@@ -48,6 +46,36 @@ namespace Comp229_Assign04
            
 
 
+        }
+
+        protected void JsonGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string miniName = Request.QueryString["MiniName"];
+
+            // Joson file in the project.
+            var filePath = MapPath("~/App_Data/Assign04.json");
+
+
+            if (File.Exists(filePath))
+            {
+                var jsonString = File.ReadAllText(filePath);
+                //Get json file contents into string
+                var collection = JsonConvert.DeserializeObject<List<Mini>>(jsonString);
+
+
+
+                var modelsDelete = from delModel in collection
+                                   where delModel.MiniName == miniName
+                                   select delModel;
+                // Remove Model from Collection
+                foreach (var item in modelsDelete)
+                {
+                    collection.Remove(item);
+                }
+
+                File.WriteAllText(filePath, JsonConvert.SerializeObject(collection));
+                Response.Redirect("Default.aspx");
+            }
         }
     }
 }

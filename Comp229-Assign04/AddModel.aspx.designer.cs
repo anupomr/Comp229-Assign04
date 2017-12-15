@@ -13,22 +13,58 @@ namespace Comp229_Assign04 {
     public partial class AddModel {
         
         /// <summary>
-        /// MiniNameTextbox control.
+        /// MiniNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MiniNameTextbox;
+        protected global::System.Web.UI.WebControls.TextBox MiniNameTextBox;
         
         /// <summary>
-        /// WillpowerTextbox control.
+        /// FactionTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox WillpowerTextbox;
+        protected global::System.Web.UI.WebControls.TextBox FactionTextBox;
+        
+        /// <summary>
+        /// RankTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox RankTextBox;
+        
+        /// <summary>
+        /// BaseTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox BaseTextBox;
+        
+        /// <summary>
+        /// SizeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SizeTextBox;
+        
+        /// <summary>
+        /// DeploymentZoneTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DeploymentZoneTextBox;
         
         /// <summary>
         /// MobilityTextBox control.
@@ -40,13 +76,31 @@ namespace Comp229_Assign04 {
         protected global::System.Web.UI.WebControls.TextBox MobilityTextBox;
         
         /// <summary>
-        /// WoundDateTextbox control.
+        /// WillpowerTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox WoundDateTextbox;
+        protected global::System.Web.UI.WebControls.TextBox WillpowerTextBox;
+        
+        /// <summary>
+        /// ResilianceTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ResilianceTextBox;
+        
+        /// <summary>
+        /// WoundDateTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox WoundDateTextBox;
         
         /// <summary>
         /// CancelButton control.
