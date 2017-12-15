@@ -13,6 +13,8 @@
                     </asp:TextBox>
                 </div>
 
+
+
                 <div class="form-group">
                     <label class="control-label" for="FactionTextBox">Faction   </label>
                     <asp:TextBox runat="server" CssClass="form-control" ID="FactionTextBox"

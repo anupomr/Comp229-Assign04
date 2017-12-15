@@ -47,6 +47,7 @@ namespace Comp229_Assign04
 
         protected void DataList_ItemCommand(object source, DataListCommandEventArgs e)
         {
+            Mini newMini = new Mini();
             string miniName = Request.QueryString["MiniName"];
 
             // Joson file in the project.
@@ -64,13 +65,22 @@ namespace Comp229_Assign04
                 var modelsDelete = from delModel in collection
                                    where delModel.MiniName == miniName
                                    select delModel;
+               
                 // Remove Model from Collection
                 foreach (var item in modelsDelete)
                 {
-                    collection.Remove(item);
+                    if (item.MiniName == miniName)
+                    {
+                        //collection.Remove(item);
+                        newMini = item;
+                    }
+               
+                    //collection.RemoveAll(item);
+
+                   
                 }
-
-
+                collection.Remove(newMini);
+                File.WriteAllText(filePath, JsonConvert.SerializeObject(collection));
                 Response.Redirect("Default.aspx");
             }
         }

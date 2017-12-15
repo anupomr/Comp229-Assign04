@@ -48,7 +48,7 @@ namespace Comp229_Assign04
 
         }
 
-        protected void JsonGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
+       /* protected void JsonGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             string miniName = Request.QueryString["MiniName"];
 
@@ -76,6 +76,6 @@ namespace Comp229_Assign04
                 this.getGames();
                 Response.Redirect("Default.aspx");
             }
-        }
+        }*/
     }
 }

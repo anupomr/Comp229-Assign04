@@ -31,29 +31,37 @@ namespace Comp229_Assign04
         {
             string miniName = Request.QueryString["MiniName"];
             var filePath = MapPath("~/App_Data/Assign04.json");
-            Mini item = new Mini();
-            item.MiniName = MiniNameTextBox.Text;
-            item.faction = FactionTextBox.Text;
-            item.rank = Convert.ToInt32(RankTextBox.Text);
-            item._base = Convert.ToInt32(BaseTextBox.Text);
-            item.size = Convert.ToInt32(SizeTextBox.Text);
-            item.deploymentZone = DeploymentZoneTextBox.Text;
-            item.mobility = Convert.ToInt32(MobilityTextBox.Text);
-            item.willpower = Convert.ToInt32(WillpowerTextBox.Text);
-            item.resiliance = Convert.ToInt32(ResilianceTextBox.Text);
-            item.wounds = Convert.ToInt32(WoundDateTextBox.Text);
+            //Mini item = new Mini();
+            
+
+
+           
 
             if (File.Exists(filePath))
             {
                 var jsonString = File.ReadAllText(filePath);
                 //Get json file contents into string
-                var collection = JsonConvert.DeserializeObject<List<Mini>>(jsonString);                
-                if(miniName==" ")
-                { 
-                collection.Add(item);
+                var collection = JsonConvert.DeserializeObject<List<Mini>>(jsonString);
+                var models = from selectModel in collection
+                             where selectModel.MiniName == miniName
+                             select selectModel;
+                foreach (Mini item in models)
+                {
+                    item.MiniName = MiniNameTextBox.Text;
+                    item.faction = FactionTextBox.Text;
+                    item.rank = Convert.ToInt32(RankTextBox.Text);
+                    item._base = Convert.ToInt32(BaseTextBox.Text);
+                    item.size = Convert.ToInt32(SizeTextBox.Text);
+                    item.deploymentZone = DeploymentZoneTextBox.Text;
+                    item.mobility = Convert.ToInt32(MobilityTextBox.Text);
+                    item.willpower = Convert.ToInt32(WillpowerTextBox.Text);
+                    item.resiliance = Convert.ToInt32(ResilianceTextBox.Text);
+                    item.wounds = Convert.ToInt32(WoundDateTextBox.Text);
+                }
+                //collection.Add(item);
                 //Write the web content into json File
                 File.WriteAllText(filePath, JsonConvert.SerializeObject(collection));
-                }
+                
             }
 
            

@@ -7,7 +7,7 @@
                    <i class="fa fa-plus"></i>Add Model
                </a>
     <asp:GridView ID="JsonGridView" runat="server" AutoGenerateColumns="false"
-                    cssClass="table table-bordered table-striped table-hover" OnRowDeleting="JsonGridView_RowDeleting" DataKeyNames="MiniName">
+                    cssClass="table table-bordered table-striped table-hover" DataKeyNames="MiniName">
                     <Columns>
                         <asp:HyperLinkField DataTextField="MiniName" HeaderText="Mini Name" Visible="true" 
                              DataNavigateUrlFields="MiniName" DataNavigateUrlFormatString="Model.aspx?MiniName={0}" />
@@ -25,8 +25,7 @@
                             runat="server" DataNavigateUrlFields="MiniName"
                             DataNavigateUrlFormatString="UpdateModel.aspx?MiniName={0}" />
 
-                         <asp:CommandField DeleteText="<i class='fa fa-trash-o fa-lg'></i> Delete"
-                            ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
+                        
                     </Columns>
                 </asp:GridView>
 
