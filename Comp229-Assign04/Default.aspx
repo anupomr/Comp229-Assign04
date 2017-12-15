@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Comp229_Assign04.Index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2><%: Title %>.</h2>
-    <h3>Your Landing page.</h3>
+   
+    <h3>Hit Games</h3>
      <a href="AddModel.aspx" class="btn btn-success btn-sm">
                    <i class="fa fa-plus"></i>Add Model
                </a>

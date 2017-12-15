@@ -57,14 +57,13 @@ namespace Comp229_Assign04
                     item.willpower = Convert.ToInt32(WillpowerTextBox.Text);
                     item.resiliance = Convert.ToInt32(ResilianceTextBox.Text);
                     item.wounds = Convert.ToInt32(WoundDateTextBox.Text);
+                    //collection.Add(item);
                 }
-                //collection.Add(item);
+                
                 //Write the web content into json File
                 File.WriteAllText(filePath, JsonConvert.SerializeObject(collection));
                 
-            }
-
-           
+            }           
 
             // Finally Back to Landing page
             Response.Redirect("Default.aspx");
@@ -100,17 +99,8 @@ namespace Comp229_Assign04
                     WillpowerTextBox.Text=  Convert.ToString(item.willpower);
                     ResilianceTextBox.Text = Convert.ToString(item.resiliance);
                     WoundDateTextBox.Text=  Convert.ToString(item.wounds);
-
-
                 }
-
-
-
-
             }
-
-
-
         }
     }
 }

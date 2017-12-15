@@ -70,14 +70,9 @@ namespace Comp229_Assign04
                 foreach (var item in modelsDelete)
                 {
                     if (item.MiniName == miniName)
-                    {
-                        //collection.Remove(item);
+                    {                        
                         newMini = item;
                     }
-               
-                    //collection.RemoveAll(item);
-
-                   
                 }
                 collection.Remove(newMini);
                 File.WriteAllText(filePath, JsonConvert.SerializeObject(collection));
