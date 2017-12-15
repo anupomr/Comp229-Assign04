@@ -19,6 +19,12 @@
                         <asp:BoundField DataField="deploymentZone" HeaderText="Deployment Zone" Visible="true" />
                         <asp:BoundField DataField="mobility" HeaderText="Mobility" Visible="true" />
                         <asp:BoundField DataField="willpower" HeaderText="Willpower" Visible="true" />
+
+                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i> Update"
+                            NavigateUrl="~/UpdateModel.aspx.cs" ControlStyle-CssClass="btn btn-primary btn-sm"
+                            runat="server" DataNavigateUrlFields="MiniName"
+                            DataNavigateUrlFormatString="UpdateModel.aspx?MiniName={0}" />
+
                          <asp:CommandField DeleteText="<i class='fa fa-trash-o fa-lg'></i> Delete"
                             ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
                     </Columns>

@@ -34,8 +34,8 @@ namespace Comp229_Assign04
                 
                 // bind the result to the Datalist
 
-                 var models = from c in collection
-                              select c;
+                 var models = from selectModel in collection
+                              select selectModel;
 
                 JsonGridView.DataSource = models;
                 JsonGridView.DataBind();
@@ -73,7 +73,7 @@ namespace Comp229_Assign04
                     collection.Remove(item);
                 }
 
-                File.WriteAllText(filePath, JsonConvert.SerializeObject(collection));
+                this.getGames();
                 Response.Redirect("Default.aspx");
             }
         }
